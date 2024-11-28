@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About GameHub - Discover the best gaming platform">
+    <meta name="keywords" content="about, GameHub, gaming platform, team, mission">
+    <meta name="author" content="Your Name">
+    <title>About Us - GameHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <style>
+    
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links li {
+            display: inline;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #0779e4;
+        }
+        .search-bar input {
+            padding: 8px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+      
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.8rem;
+            margin-top: 30px;
+            color: #333;
+        }
+        ul {
+            font-size: 1.1rem;
+            list-style-type: disc;
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+      
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+            .search-bar input {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+ 
+    <header>
+        <nav class="navbar">
+            <a href="index.html"><div class="logo"><img src="I_will_make_change_in_your_mind_after_you_watch_my_gig-removebg-preview.png" width="120px" alt="GameHub"></div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for a game..." />
+                <button onclick="searchGame()">Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Welcome to Game Hub</h2>
+            <p>At Game Hub, we aim to be your go-to destination for all things gaming. Our platform provides you with the latest news, insightful game reviews, detailed guides, and engaging content that spans across all gaming genres. Whether you're a passionate gamer looking for tips, a newcomer seeking to explore the world of gaming, or a veteran in need of expert advice, Game Hub has something for you!</p>
+
+            <p>Our team is a group of dedicated gamers and industry experts who strive to create content that informs, entertains, and inspires our audience. We cover everything from new game releases and platform-specific updates to in-depth tutorials and community events. With Game Hub, you're always in the loop about the best and most exciting developments in the gaming world.</p>
+
+            <h3>Why Game Hub?</h3>
+            <p>We believe in providing the highest quality content with a focus on accuracy and entertainment. Our goal is to foster a strong, positive gaming community where everyone can share their experiences and connect with others who share their passion. Game Hub is not just a website—it's a hub for gamers, by gamers.</p>
+
+            <h3>What We Offer:</h3>
+            <ul>
+                <li>Up-to-date gaming news and updates</li>
+                <li>In-depth game reviews and analysis</li>
+                <li>Expert game guides and tips</li>
+                <li>Community discussions and forums</li>
+                <li>Exclusive gaming content and features</li>
+            </ul>
+
+            <p>We invite you to explore our website, participate in our growing community, and stay connected with the world of gaming. Thank you for visiting Game Hub—where gamers unite!</p>
+        </section>
+    </div>
+
+ 
+    <footer>
+        <p>&copy; 2024 Game Hub. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function searchGames() {
+            
+            let searchQuery = document.getElementById("search").value.toLowerCase();
+            console.log(searchQuery); 
+        }
+    </script>
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>

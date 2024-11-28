@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - GameHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <style>
+       
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            background-color: #333;
+        }
+
+        .navbar .logo img {
+            width: 120px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0779e4;
+        }
+
+       
+        .payment-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        .payment-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        
+        .payment-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background-color: #333;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-option:hover {
+            background-color: #444;
+        }
+
+        .payment-option.selected {
+            background-color: #0779e4;
+            color: #fff;
+        }
+
+        .payment-option img {
+            width: 80px;
+        }
+
+        .payment-option p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .payment-button {
+            padding: 12px 20px;
+            background-color: #0779e4;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .payment-button:hover {
+            background-color: #055da1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+      
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #333;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            width: 400px;
+        }
+
+        .modal-content input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .modal-content button {
+            padding: 12px 20px;
+            background-color: #0779e4;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #055da1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html"><div class="logo"><img src="I_will_make_change_in_your_mind_after_you_watch_my_gig-removebg-preview.png" width="120px" alt="GameHub"></div></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for a game..." />
+                <button onclick="searchGame()">Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="payment-section">
+            <h1>Complete Your Purchase</h1>
+            <p>Select your payment method:</p>
+
+            <div class="payment-options">
+
+                <div class="payment-option" data-method="credit-card">
+                    <img src="https://thumbs.dreamstime.com/b/kiev-ukraine-september-visa-mastercard-logos-printed-white-paper-visa-mastercard-american-multinational-102631953.jpg" alt="Credit/Debit Card">
+                    <p>Credit/Debit Card</p>
+                </div>
+
+                
+                <div class="payment-option" data-method="paypal">
+                    <img src="https://cdn.prod.website-files.com/5ee732bebd9839b494ff27cd/5ee732bebd98395aa0ff2815_paypal-logo-preview.webp" alt="PayPal">
+                    <p>PayPal</p>
+                </div>
+
+               
+                <div class="payment-option" data-method="easypaisa">
+                    <img src="https://play-lh.googleusercontent.com/ahBZCpNP4elK4uI-gImTdi7pLpEwZUMLFngwCfWWHlzOI1GZqwipiv_ekRT--mDcVg4" alt="Easypaisa">
+                    <p>Easypaisa</p>
+                </div>
+
+              
+                <div class="payment-option" data-method="jazzcash">
+                    <img src="https://profit.pakistantoday.com.pk/wp-content/uploads/2021/05/607afa567d726.jpg" alt="JazzCash">
+                    <p>JazzCash</p>
+                </div>
+            </div>
+
+            <button class="payment-button">Proceed to Payment</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GameHub. All rights reserved.</p>
+    </footer>
+
+  
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <h2>Enter Account Details</h2>
+            <input type="text" id="accountName" placeholder="Account Name" required />
+            <input type="text" id="accountNumber" placeholder="Account Number" required />
+            <button id="submitPayment">Submit</button>
+        </div>
+    </div>
+
+    <script>
+    
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        const paymentButton = document.querySelector('.payment-button');
+        const paymentModal = document.getElementById('paymentModal');
+        const submitPaymentButton = document.getElementById('submitPayment');
+        const accountNameInput = document.getElementById('accountName');
+        const accountNumberInput = document.getElementById('accountNumber');
+
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', function () {
+                paymentOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+
+       
+        paymentButton.addEventListener('click', function () {
+            const selectedOption = document.querySelector('.payment-option.selected');
+            if (selectedOption) {
+                const paymentMethod = selectedOption.getAttribute('data-method');
+                paymentModal.style.display = 'flex'; 
+            } else {
+                alert('Please select a payment method.');
+            }
+        });
+
+       
+        submitPaymentButton.addEventListener('click', function () {
+            const accountName = accountNameInput.value;
+            const accountNumber = accountNumberInput.value;
+
+            if (accountName && accountNumber) {
+              
+                alert('Processing payment...');
+                
+                setTimeout(function () {
+                    alert('Payment Successful! Enjoy your game.');
+                    window.location.href = "index.html";  
+                }, 2000); 
+
+                
+                paymentModal.style.display = 'none';
+            } else {
+                alert('Please fill in all the fields.');
+            }
+        });
+
+       
+        window.onclick = function (event) {
+            if (event.target == paymentModal) {
+                paymentModal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+
+</html>
