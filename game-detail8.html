@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameHub - Buy Your Favorite Games">
+    <meta name="keywords" content="Games, Buy Now, GameHub">
+    <meta name="author" content="Your Name">
+    <title>Game Detail - Farming Simulator 25 Remastered</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212;
+            color: #f1f1f1;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 0 10%;
+        }
+
+     
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background-color: #1d1d1d;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo img {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: #383333
+        }
+
+        
+        .game-detail-container {
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        .game-detail-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .game-info {
+            margin-top: 20px;
+        }
+
+        .game-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: blanchedalmond
+        }
+
+        .game-info p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .buy-now-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 15px 40px;
+            color: #fff;
+            background-color: #383333
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #383333
+        }
+
+
+       
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: #1d1d1d;
+            text-align: center;
+            color: #888;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .search-bar input {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="I_will_make_change_in_your_mind_after_you_watch_my_gig-removebg-preview.png" alt="GameHub Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for a game..." />
+                <button onclick="searchGame()">Search</button>                
+            </div>
+        </nav>
+    </header>
+
+    <div class="game-detail-container">
+        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2300320/header.jpg?t=1731923626" alt="Farming Simulator 25">
+        <video width="100%" controls autoplay loop muted>
+            <source src="Farming Simulator 25 on Steam.webm" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="game-info">
+            <b><h1>Farming Simulator 25 Remastered</h1>
+            <p>Farming Simulator 25 adds rice & other crops on three maps, new animals, productions & more. 400+ machines included, with enhanced graphics & physics.Build a farm along winding rivers and historic grain elevators in North America, surrounded by ponds in Europe,filled with rice paddies and manage an empire of business ventures.</p></b>
+        </div>
+        <a href="buy.html" class="buy-now-btn" target="_blank">Buy Now</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 GameHub. All rights reserved.</p>
+    </footer>
+    <script src="search.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

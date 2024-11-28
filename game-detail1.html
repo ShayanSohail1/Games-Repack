@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GameHub - Buy Your Favorite Games">
+    <meta name="keywords" content="Games, Buy Now, GameHub">
+    <meta name="author" content="Your Name">
+    <title>Game Detail - Black Myth: Wukong</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212;
+            color: #f1f1f1;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 0 10%;
+        }
+
+      
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background-color: #1d1d1d;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo img {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: #383333
+}
+
+        
+        .game-detail-container {
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        .game-detail-container img {
+           
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .game-info {
+            margin-top: 20px;
+        }
+
+        .game-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: blanchedalmond
+        }
+
+        .game-info p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .buy-now-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 15px 40px;
+            color: #fff;
+            background-color: #383333
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #383333
+        }
+
+     
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: #1d1d1d;
+            text-align: center;
+            color: #888;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            .search-bar input {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="I_will_make_change_in_your_mind_after_you_watch_my_gig-removebg-preview.png" alt="GameHub Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for a game..." />
+                <button onclick="searchGame()">Search</button>                
+            </div>
+        </nav>
+    </header>
+
+    <div class="game-detail-container">
+        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2358720/header.jpg?t=1729236256" alt="Black Myth: Wukong">
+        <video width="100%" controls autoplay loop muted>
+            <source src="Black-Myth-Wukong-Trailer.mp4.webm" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="game-info">
+            <h1>Black Myth: Wukong</h1>
+            <b><p>Black Myth: Wukong is an action RPG rooted in Chinese mythology. The story is based on Journey to the West, one of the Four Great Classical Novels of Chinese literature. You shall set out as the Destined One to venture into the challenges and marvels ahead, to uncover the obscured truth beneath the veil of a glorious legend from the past.</p></b>
+        </div>
+        <a href="buy.html" class="buy-now-btn" target="_blank">Buy Now</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 GameHub. All rights reserved.</p>
+    </footer>
+    <script>
+   
+        const gamesData = {
+            1: { title: 'Black Myth: Wukong', description: 'Black Myth: Wukong features a Monkey King protagonist with shapeshifting abilities, immersive combat, and a vast open world filled with mythical creatures.', price: '$39.99',
+             trailer: 'Black-Myth-Wukong-Trailer.mp4.webm' },
+            2: { title: 'Grand Theft Auto V', description: 'Grand Theft Auto V is an open-world action-adventure game set in the fictional city of Los Santos. Players control three protagonists involved in criminal activities while exploring a detailed world filled with missions, heists, and side activities, offering both single-player and multiplayer modes through GTA Online.', price: '$49.50', trailer: 'Grand Theft Auto V on Steam.webm' },
+            3: { title: 'Resident Evil 4 Remake', description: 'Resident Evil 4 Remake updates the survival horror experience with modern graphics, controls, and enhanced gameplay. Players control Leon S. Kennedy as he embarks on a mission to rescue the U.S. presidents daughter from a dangerous cult in rural Spain, battling horrifying creatures along the way.', price: '$43.39', trailer: 'Resident Evil 4 on Steam.webm' },
+            4: { title: 'Days Gone', description: 'Set in a post-apocalyptic world, Days Gone follows Deacon St. John, a former biker and bounty hunter, as he navigates a devastated Oregon landscape filled with "Freakers," zombie-like creatures. The game combines survival mechanics, exploration, and intense combat in an open-world environment.', price: '$59.99', trailer: 'Days Gone on Steam.webm' },
+            5: { title: 'Ghost Of Tsushima', description: 'Set in feudal Japan during the Mongol invasion, Ghost of Tsushima follows samurai Jin Sakai as he fights to protect his home, using both traditional sword fighting and stealth tactics. The game emphasizes exploration, beautiful landscapes, and a blend of action and strategy, with a focus on honor and the samurai code.', price: '$44.80', trailer: 'ghost of tsushima on steam.webm' },
+            6: { title: 'Horizon Zero Dawn Remastered', description: 'Horizon Zero Dawn is an action RPG set in a post-apocalyptic future where humanity has been overtaken by robotic creatures. Players control Aloy, a skilled hunter, as she unravels the mystery of her past and the collapse of civilization, all while battling mechanical beasts in a vast open world.', price: '$75.00', trailer: 'Horizon on steam.webm' },
+            7: { title: 'Red Dead Redemption', description: 'A critically acclaimed open-world action-adventure game set in the American frontier, Red Dead Redemption 2 follows Arthur Morgan, a member of the Van der Linde gang, as he struggles with loyalty and survival in a world slowly being overtaken by modernity. The game is known for its breathtaking landscapes, immersive storytelling, and complex characters.', price: '$20.99', trailer: 'Red Dead Redemption on Steam.webm' },
+            8: { title: 'Farming Simulator 25', description: 'Farming Simulator 25 is a simulation game where players manage their own farm, growing crops, raising animals, and running various agricultural machinery. ', price: '$17.89', trailer: 'Farming Simulator 25 on Steam.webm' },
+            9: { title: 'Goat Simulator Remastered', description: 'Goat Simulator 25 offers a quirky and chaotic open-world experience where players control a goat causing destruction in various environments.', price: '$36.10', trailer: 'Goat Simulator- Remastered on Steam.webm' },
+            10: { title: 'S.T.A.L.K.E.R. 2: Heart of Chornobyl', description: 'A first-person survival horror game set in the radioactive exclusion zone around Chernobyl, S.T.A.L.K.E.R. 2: Heart of Chornobyl combines open-world exploration, tactical combat, and psychological horror.', price: '$59.99', trailer: 'Pre-purchase S.T.A.L.K.E.R. 2- Heart of Chornobyl on Steam.webm' }
+        };
+       
+        function loadGameDetails(gameId) {
+            if (gamesData[gameId]) {
+                const game = gamesData[gameId];
+                document.getElementById('gameTitle').textContent = game.title;
+                document.getElementById('gameDescription').textContent = game.description;
+                document.getElementById('gamePrice').textContent = `Price: ${game.price}`;
+                document.getElementById('trailerSrc').src = game.trailer;
+
+             
+                document.getElementById('buyBtn').href = `buy.html?game=${gameId}`;
+            } else {
+              
+                document.getElementById('gameTitle').textContent = 'Game not found';
+                document.getElementById('gameDescription').textContent = 'Sorry, we could not find the game you were looking for.';
+                document.getElementById('gamePrice').textContent = '';
+                document.getElementById('gameTrailer').innerHTML = '';
+            }
+        }
+
+  
+        const urlParams = new URLSearchParams(window.location.search);
+        const gameId = urlParams.get('game');
+        if (gameId) {
+            loadGameDetails(gameId);
+        }
+
+        
+        const buyButtons = document.querySelectorAll('.buyBtn');
+        buyButtons.forEach(button => {
+            button.addEventListener('click', function (event) {
+                const clickedGameId = event.target.getAttribute('data-game-id');
+                window.location.href = `page.html?game=${clickedGameId}`;  
+            });
+        });
+</script>
+<script src="search.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
